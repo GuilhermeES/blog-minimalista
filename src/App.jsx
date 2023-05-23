@@ -1,9 +1,12 @@
-function App() {
+import { GlobalStyle } from './components/Global.styled'
+import Home from './pages/Home'
 
+function App() {
   return (
-    <div>
-      <h1>Start</h1>
-    </div>
+    <>
+      <GlobalStyle/>
+      <Home/>
+    </>
   )
 }
 
