@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderHero = styled.section`
-    padding-top: 70px;
+    padding: 70px 0 70px 0;
 `
 export const Page = styled.span`
     background-color: #F2F4F7;
