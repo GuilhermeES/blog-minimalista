@@ -1,5 +1,7 @@
 import Hero from '../../components/Hero/index'
 import Article from '../../components/Article/index'
+import Footer from '../../components/Footer/index'
+
 
 import { Container } from '../../styled/Container.styled'
 import {Articles, Loader} from './style'
@@ -55,6 +57,7 @@ export default function Home() {
                     }                                              
                 </Container>
             </Articles>
+            <Footer/>
         </>
     );
 }
