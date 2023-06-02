@@ -1,5 +1,6 @@
 import {Colum, Row} from '../../styled/Grid.styled'
-import {ArticleItem, Data, Title, Subtitle, Link, Image} from './style'
+import {ArticleItem, Data, Title, Subtitle, Image} from './style'
+import { Link } from "react-router-dom";
 
 export default function Article ({ data, title, desc, link,img }) {
 
@@ -11,7 +12,6 @@ export default function Article ({ data, title, desc, link,img }) {
 
     function formateString(desc){
        let getDesc =  desc.replace(/(<([^>]+)>)/ig, '')
-       console.log(getDesc)
        return getDesc;
     }
 
@@ -21,7 +21,7 @@ export default function Article ({ data, title, desc, link,img }) {
                 <Row>
                     <Colum sm="12" md="6" lg="6">
                         <Data>{formateDate(data)}</Data>
-                        <Link href={link}>
+                        <Link to={'blog/' + link}>
                             <Title>{title}</Title>
                         </Link>
                         <Subtitle>{formateString(desc)}</Subtitle>
