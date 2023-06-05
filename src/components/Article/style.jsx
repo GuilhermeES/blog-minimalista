@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ArticleItem = styled.div`
+export const ArticleItem = styled.article`
     background: #FFFFFF;
     border-radius: 20px;
     padding: 40px 30px 40px 30px;

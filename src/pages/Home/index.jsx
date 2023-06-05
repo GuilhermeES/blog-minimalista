@@ -15,7 +15,7 @@ export default function Home() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://strongest.com.br/wp-json/wp/v2/posts')
+        fetch('https://strongest.com.br/wp-json/wp/v2/posts?per_page=5')
         .then(response => response.json())
         .then(res => { 
             setPosts(res) 
@@ -47,6 +47,7 @@ export default function Home() {
                                 <Article 
                                     key={post.id} 
                                     data={post.date}
+                                    id={post.id}
                                     title={post.title.rendered}
                                     desc={post.excerpt.rendered}
                                     link={post.slug}

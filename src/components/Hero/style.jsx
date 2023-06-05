@@ -9,11 +9,19 @@ export const Page = styled.span`
     font-weight: 700;
     color: #1D2939;
     border-radius: 20px;
+
+    @media (max-width:576px) {
+        display: block;
+    }
 `
 export const Title = styled.h1`
     font-size: 50px;
     color: #C41740;
     font-weight: 700;
+
+    @media (max-width:576px) {
+        font-size: 34px;
+    }
 `
 export const Subtitle = styled.p`
     font-size: 25px;
