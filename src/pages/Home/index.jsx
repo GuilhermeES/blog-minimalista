@@ -2,13 +2,12 @@ import Hero from '../../components/Hero/index'
 import Article from '../../components/Article/index'
 import Footer from '../../components/Footer/index'
 
-
 import { Container } from '../../styled/Container.styled'
 import {Articles, Loader} from './style'
 import {Colum, Row} from '../../styled/Grid.styled'
 import {Title} from '../../styled/Texts.sytled'
-import {Button} from '../../styled/Buttons.styled'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
     const [posts, setPosts] = useState([]);
@@ -16,11 +15,15 @@ export default function Home() {
 
     useEffect(() => {
         fetch('https://strongest.com.br/wp-json/wp/v2/posts?per_page=5')
-        .then(response => response.json())
-        .then(res => { 
-            setPosts(res) 
-            setLoading(false)
+        .then(response => {
+            console.log(response.headers.get('X-Wp-Totalpages'))
+            return response.json()
         })
+        //.then((data) => {data.json()})
+        .then(result => { 
+            setPosts(result)
+            setLoading(false)
+        });
     }, [])
 
     return (
@@ -40,7 +43,7 @@ export default function Home() {
                                     <Title>Recentes</Title>
                                 </Colum>
                                 <Colum m="12" md="6" lg="6" $textAlign="end">
-                                    <Button href="#">Ver todos</Button>
+                                    <Link to="/blog">Ver todos</Link>
                                 </Colum>
                             </Row>
                             {posts.map(post => 

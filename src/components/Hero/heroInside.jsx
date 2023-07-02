@@ -6,7 +6,7 @@ export default function HeroInside({title}) {
         <>
             <HeaderHero>
                 <Container textalign="center"> 
-                    <Page>⛺ Home / Posts / {title} </Page>
+                    <Page>⛺ Home / Blog / {title} </Page>
                     <Title>{title}</Title>
                 </Container>
             </HeaderHero>

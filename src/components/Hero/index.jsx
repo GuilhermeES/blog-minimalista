@@ -6,10 +6,13 @@ export default function Hero() {
         <>
             <HeaderHero>
                 <Container textalign="center"> 
-                    <Page>⛺ Homepage</Page>
-                    <Title>Minimal blog template for creative expressions</Title>
+                    <Page>⛺ Homepage </Page>
+                    <Title>Um blog minimalista.</Title>
                     <Subtitle>
-                        100% customisable and SEO-friendly blog template for personal and commercial purposes.
+                        Um blog para colocar em práticas os principais conceitos em React e mais.   
+                    </Subtitle>
+                    <Subtitle>
+                        Components - Props - React hooks básicos - React Router - Styled Components - API WP
                     </Subtitle>
                 </Container>
             </HeaderHero>
