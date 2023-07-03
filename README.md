@@ -1,4 +1,4 @@
-# Meu blog.
+# Blog minimalista.
 Esse é um blog minimalista para por em prática os principais conceitos de React. Para mostrar os posts, estou consumindo API do WP de um site feito por mim. <br>
 
 <div>
